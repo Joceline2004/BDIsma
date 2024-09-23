@@ -1,0 +1,196 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo del cuerpo */
+body {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Estilos del contenedor del formulario */
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    max-width: 90%;
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #fff;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group input:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-submit {
+    background-color: #8b4afa;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-submit:hover {
+    background-color: #ef48f8;
+}
+
+/* Flash messages */
+.flash-messages {
+    margin-bottom: 20px;
+}
+
+.flash-message {
+    text-align: center;
+    background-color: #f0f8ff;
+    border: 1px solid #00f;
+    padding: 10px;
+    color: #00f;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* CSS de la tabla de contactos */
+.container-table {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contact-table th, .contact-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.contact-table th {
+    background-color: #6a11cb;
+    color: #fff;
+    font-weight: bold;
+}
+
+.contact-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.contact-table tr:hover {
+    background-color: #eaeaea;
+}
+
+.contact-table td {
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Botón de Ver Contactos Guardados */
+.btn-ver {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-ver {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none; /* Elimina la línea de subrayado */
+}
+
+.btn-ver:hover {
+    background-color: #4e0fa6;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+

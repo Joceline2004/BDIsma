@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Contactos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Index.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Lista de Contactos</h1>
+
+        <table class="contact-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre Completo</th>
+                    <th>Número Telefónico</th>
+                    <th>Email</th>
+                    <th colspan="2">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contacto in contactos %}
+                <tr>
+                    <td>{{ contacto[0] }}</td>
+                    <td>{{ contacto[1] }}</td>
+                    <td>{{ contacto[2] }}</td>
+                    <td>{{ contacto[3] }}</td>
+
+                    <!-- Columna para acciones de eliminar y modificar -->
+                    <td><a href="/Eliminar_Contacto/{{ contacto[0] }}" class="btn-submit">Eliminar</a></td>
+                    <td><a href="/Modificar_Contacto/{{ contacto[0] }}" class="btn-submit">Modificar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
