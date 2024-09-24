@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar Contacto</title>
     <!-- Asegúrate de que el archivo CSS esté en la carpeta 'static' y se llame correctamente -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='Index.css') }}">
+    <link rel="stylesheet" href="static\index.css">
+    <!--{{ url_for('static', filename='Index.css') }}-->
 
 </head>
+
 <body>
 
-    <div class="container.table">
-        <!-- Bloque de mensajes flash para mostrar notificaciones -->
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                <div class="flash-messages">
-                    {% for message in messages %}
-                        <p class="flash-message">{{ message }}</p>
-                    {% endfor %}
-                </div>
-            {% endif %}
-        {% endwith %}
+    <div class="container_form">
 
-        <h1>Agregar Contacto</h1>
+        <!-- Bloque de mensajes flash para mostrar notificaciones -->
+        <!--{% with messages = get_flashed_messages() %} {% if messages %}-->
+        <div class="flash-messages">
+            <!--{% for message in messages %}-->
+            <p class="flash-message">
+                <!--{{ message }}-->
+            </p>
+            <!-- {% endfor %}-->
+        </div>
+        <!-- {% endif %} {% endwith %}-->
+
         <!-- Formulario para agregar contacto, revisa que la ruta '/Agregar_Contacto' esté bien definida en Flask -->
         <form action="/Agregar_Contacto" method="POST" class="contact-form">
             <div class="input-group">
@@ -42,13 +45,19 @@
 
             <button type="submit" class="btn-submit">Guardar Contacto</button>
         </form>
+        <div class="container_morado">
+            <h1>Registrate</h1>
+            <p class="t">proporcionanos tus datos para</p>
+            <p class="tt">poder utilizar correctamente nuestro sistema</p>
+        </div>
     </div>
 
-    
-    
+
     <!-- El enlace te lleva a la página para ver los contactos guardados -->
     <a href="/VerContactosGuardados" class="btn-ver">Ver Contactos Guardados</a>
-    
+
+
 
 </body>
+
 </html>
